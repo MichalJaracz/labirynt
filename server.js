@@ -213,6 +213,9 @@ app.get("/toplist", (req, res) => {
         res.send(strona2)
     })
 })
+app.get("*.js", function (req, res) {
+    res.sendFile(__dirname + "/" + req.url)
+})
 app.get("/game", (req, res) => {
     res.sendFile(path.join(publicPath, 'dist/game.html'));
 })
