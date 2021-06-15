@@ -56766,7 +56766,7 @@ class MainCollision {
             }
             if (pomxyz == true && pomxyz2 == true) {
                 if (_Config__WEBPACK_IMPORTED_MODULE_4__.default.moveForward) {
-                    this.player.mesh.translateX(0.8)
+                    this.player.mesh.translateX(1.4)
                     if (pm == true) {
                         this.ruch()
                         pm = false
