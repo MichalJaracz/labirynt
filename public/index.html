@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="image flex flex-col h-screen items-center justify-center">
+    <div id="nick" class="bg-white p-10 text-center rounded shadow">
+        <h1 class="text-2xl mb-3">Wybierz nick! :)</h1>
+        <form id="form" class="mt-4">
+            <input id="name" class="border px-4 py-2" type="text" placeholder="Nick..." />
+            <button class="border border-gray-400 bg-green-600 text-white px-4 py-2">
+                Submit
+            </button>
+        </form>
+    </div>
+    <div id="waitingContainer" class="hidden flex flex-col h-screen items-center justify-center">
+        <div class="rounded-lg flex items-center justify-center bg-pink-300 w-10/12">
+            <h1 class="text-3xl text-gray-400 font-serif"></h1>
+        </div>
+        <h1 id="waiting" class="text-gray-400 font-serif" style="font-size:100px;"></h1>
+        <button id="startGame"
+            class="hidden bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            Start
+        </button>
+    </div>
+    <div id="startedContainer" class="hidden flex flex-col h-screen items-center justify-center">
+        <h1 class="text-gray-400 font-serif" style="font-size:100px;">Wybierz Level!</h1>
+
+        <button id="bt1"
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            Level 1
+        </button>
+        <button id="bt2"
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            Level 2
+        </button>
+        <button id="bt3"
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            Level 3
+        </button>
+        <button id="bt4"
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            Level 4
+        </button>
+        <!-- <form action="http://localhost:3000/game" method="get"> -->
+        <button id="save" class="bg-gray-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Zapisz
+        </button>
+        <!-- </form> -->
+    </div>
+    <div id="startedContainer2" class="hidden flex flex-col h-screen items-center justify-center">
+        <h1 class="text-gray-400 font-serif" style="font-size:100px;">Czekaj na wybór levelu</h1>
+    </div>
+    <div id="startedContainer2" class="hidden flex flex-col h-screen items-center justify-center">
+        <h1 class="text-gray-400 font-serif" style="font-size:100px;"></h1>
+    </div>
+</body>
+
+</html>
