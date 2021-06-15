@@ -116,7 +116,7 @@ app.get('/end', (req, res) => {
         });
     }
 
-    res.send(strona)
+    setTimeout(() => { res.send(strona) }, 200)
 
 })
 app.get("/toplist", (req, res) => {
