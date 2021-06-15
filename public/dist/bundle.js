@@ -56831,7 +56831,7 @@ class MainCollision {
                 }
                 this.socket.emit('nickname-time-level', ob)
                 // alert("Wygrał gracz: " + nickname + " o czasie: " + zegar)
-                this.socket.emit('alert', this.string)
+                // this.socket.emit('alert', this.string)
 
             }
             this.socket.on('end-point', data => {

@@ -83,10 +83,10 @@ io.on('connection', socket => {
         }
         // io.to('room').emit('start-game-user2', users)
     })
-    socket.on('alert', data => {
-        winner = data
-        io.to('room').emit('end-point', data)
-    })
+    // socket.on('alert', data => {
+    //     winner = data
+    //     io.to('room').emit('end-point', data)
+    // })
     socket.on('nickname-time-level', data => {
         obj = data
     })
@@ -103,7 +103,7 @@ app.get("/level", (req, res) => {
 })
 app.get('/end', (req, res) => {
     users = []
-    strona = '<html><head><style>body{ background-image: url("./image/2.jpg"); background-size: 100vw 100vh; }a:link,a:visited {color: #FCD34D;text-decoration: none;cursor: auto;font-size: 25pt;}a:link:active,a:visited:active {color: #FCD34D;font-size: 25pt;} h1 {color: #FCD34D;font-size: 50pt;} #main {position: absolute;top: 200px; width: 100%;text-align: center;}</style></head><body><div id="main"><h1>' + winner + '</h1><a href="/toplist">TOP SCORES</a></br><a href="/">wybór lvl\'a</a></div></body></html>'
+    strona = '<html><head><style>body{ background-image: url("./image/2.jpg"); background-size: 100vw 100vh; }a:link,a:visited {color: #FCD34D;text-decoration: none;cursor: auto;font-size: 25pt;}a:link:active,a:visited:active {color: #FCD34D;font-size: 25pt;} h1 {color: #FCD34D;font-size: 50pt;} #main {position: absolute;top: 200px; width: 100%;text-align: center;}</style></head><body><div id="main"><h1>' + obj.nickname + '</h1><a href="/toplist">TOP SCORES</a></br><a href="/">wybór lvl\'a</a></div></body></html>'
     var tabpom = []
     var coll1 = new Datastore({
         filename: 'kolekcja.db',
