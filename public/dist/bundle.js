@@ -56834,9 +56834,9 @@ class MainCollision {
                 // this.socket.emit('alert', this.string)
 
             }
-            this.socket.on('end-point', data => {
-                window.location.replace('/end')
-            })
+            // this.socket.on('end-point', data => {
+            window.location.replace('/end')
+            // })
         }
         this.renderer.render(this.scene, this.camera.threeCamera);
         requestAnimationFrame(this.render.bind(this));
