@@ -57123,7 +57123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const socket = _node_modules_socket_io_client_dist_socket_io_js__WEBPACK_IMPORTED_MODULE_0___default()('http://localhost:3000')
+const socket = _node_modules_socket_io_client_dist_socket_io_js__WEBPACK_IMPORTED_MODULE_0___default()('/')
 
 function init() {
     var pom
