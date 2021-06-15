@@ -56830,14 +56830,14 @@ class MainCollision {
                     level: this.pom
                 }
                 this.socket.emit('nickname-time-level', ob)
-                setTimeout(() => { window.location.replace('/end') }, 200)
 
                 // alert("Wygrał gracz: " + nickname + " o czasie: " + zegar)
                 // this.socket.emit('alert', this.string)
 
             }
-            // this.socket.on('end-point', data => {
-            // })
+            this.socket.on('end-point', data => {
+                window.location.replace('/end')
+            })
         }
         this.renderer.render(this.scene, this.camera.threeCamera);
         requestAnimationFrame(this.render.bind(this));

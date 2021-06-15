@@ -89,6 +89,7 @@ io.on('connection', socket => {
     // })
     socket.on('nickname-time-level', data => {
         obj = data
+        io.to('room').emit('end-point', data)
     })
 })
 
