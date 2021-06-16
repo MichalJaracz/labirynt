@@ -117,7 +117,7 @@ app.get('/end', (req, res) => {
         });
     }
 
-    res.send(strona)
+    res.end(strona)
 
 })
 app.get("/toplist", (req, res) => {
@@ -211,7 +211,7 @@ app.get("/toplist", (req, res) => {
         }
         strona2 += '</div></div><a href="/">Wybór lvl</a></div></body></html>'
 
-        res.send(strona2)
+        res.end(strona2)
     })
 })
 app.get("*.js", function (req, res) {
